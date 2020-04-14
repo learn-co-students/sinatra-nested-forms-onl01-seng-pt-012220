@@ -1,13 +1,25 @@
 <!-- <h1>Make your form here</h1> -->
 <form action="/pirates" method="post">
-  Pirate name: <input type="text" name="pirate[name]">
-  Pirate weight: <input type="text" name="pirate[weight]">
-  Pirate height: <input type="text" name="pirate[height]">
-  ship name: <input type="text" name="pirate[ship][][name]">
-  ship type: <input type="text" name="pirate[ship][][type]">
-  ship booty: <input type="text" name="pirate[ship][][booty]">
-  ship name: <input type="text" name="pirate[ship][][name]">
-  ship type: <input type="text" name="pirate[ship][][type]">
-  ship booty: <input type="text" name="pirate[ship][][booty]">
+  <label>Pirate</label>
+    Pirate name: <input type="text" name="pirate[name]">
+    Pirate weight: <input type="text" name="pirate[weight]">
+    Pirate height: <input type="text" name="pirate[height]">
+    <% 2.times do %>
+      <% i=1 %>
+    <fieldset>
+      <li>
+        <label name="ship_name_<%=i%>">Name</label>
+        <input name="pirate[ships][][name]"/></li>
+      <li>
+        <label>Type</label>
+        <input name="pirate[ships][][type]" />
+      </li>
+      <li>
+        <label>Booty</label>
+        <input name="pirate[ships][][booty]" />
+      </li>
+    </fieldset>
+    <%i+=1%>
+  <% end %>
   <input type="submit">
 </form>

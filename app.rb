@@ -8,16 +8,16 @@ module FormsLab
     end
 
     get '/new' do
-      erb :new
+      erb :'pirates/new'
     end
 
     post '/pirates' do
       @pirate = Pirate.new(params[:pirate][:name], params[:pirate][:weight], params[:pirate][:height])
-      @ships = []
-      params[:prate][:ship].each do |ship|
-        @ships << Ship.new(ship[:name], ship[:type], ship[:booty])
+      @this_pirates_ships = []
+      params[:pirate][:ships].each do |ship|
+        @this_pirates_ships << Ship.new(ship[:name], ship[:type], ship[:booty])
       end
-      erb :show
+      erb :'pirates/show'
     end
 
   end
