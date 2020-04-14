@@ -6,20 +6,20 @@
     Pirate height: <input type="text" name="pirate[height]">
     <% 2.times do %>
       <% i=1 %>
-    <fieldset>
-      <li>
-        <label name="ship_name_<%=i%>">Name</label>
-        <input name="pirate[ships][][name]"/></li>
-      <li>
-        <label>Type</label>
-        <input name="pirate[ships][][type]" />
-      </li>
-      <li>
-        <label>Booty</label>
-        <input name="pirate[ships][][booty]" />
-      </li>
-    </fieldset>
-    <%i+=1%>
-  <% end %>
+      <fieldset name="ship_name_<%=i%>">
+        <li>
+          <label>Name</label>
+          <input name="pirate[ships][][name]"/></li>
+        <li>
+          <label>Type</label>
+          <input name="pirate[ships][][type]" />
+        </li>
+        <li>
+          <label>Booty</label>
+          <input name="pirate[ships][][booty]" />
+        </li>
+      </fieldset>
+      <%i+=1%>
+    <% end %>
   <input type="submit">
 </form>
