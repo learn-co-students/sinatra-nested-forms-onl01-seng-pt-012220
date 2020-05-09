@@ -1,18 +1,30 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <label for="pirates">Pirates</label>
-    <form action="/pirates" method="post">
-        Pirate Name:<id="pirate_name" input type="text" name="pirate[name]">
-        Pirate Weight:<id="pirate_weight" input type="text" name="pirate[weight]">
-        Pirate Height:<id="pirate_height" input type="text" name="pirate[height]">
-        Ship Name:<id="ship_name_1" input type="text" name="pirate[ships][][name]">
-        Ship Type:<id="ship_type_1" input type="text" name="pirate[ships][][type]">
-        Ship Booty:<id="ship_booty_1" input type="text" name="pirate[ships][][booty]">
-        Ship Name:<id="ship_name_2" input type="text" name="pirate[ships][][name]">
-        Ship Type:<id="ship_type_2" input type="text" name="pirate[ships][][type]">
-        Ship Booty:<id="ship_booty_2" input type="text" name="pirate[ships][][booty]">
-        <input type="Submit">
-    </form>
-</body>
-</html>
+
+<form action="/pirates" method="post">
+    <label for="pirate_name">Pirates</label>   
+    <input type="text" name="pirate[name]">
+
+    <label for="pirate_weight">Weight</label>
+    <input type="text" name="pirate[weight]">
+
+    <label for="pirate_height">Height</label>
+    <input type="text" name="pirate[height]">
+
+    <label for="ship_name_1">Ship Name</label>
+    <id="ship_name_1" input type="text" name="pirate[ships][][name]">
+
+    <label for="ship_type">Ship No. 1 Type</label>
+    <id="ship_type_1" input type="text" name="pirate[ships][][type]">
+
+    <label for="ship_booty">Ship No. 1 Booty</label>
+    <id="ship_booty_1" input type="text" name="pirate[ships][][booty]">
+
+    <label for="ship_name">Ship No. 2 Name</label>
+    <id="ship_name_2" input type="text" name="pirate[ships][][name]">
+    
+    <label for="ship_type">Ship No. 2 Type</label>
+    <id="ship_type_2" input type="text" name="pirate[ships][][type]">
+    
+    <label for="ship_booty">Ship No. 2 Booty</label>
+    <id="ship_booty_2" input type="text" name="pirate[ships][][booty]">
+    <input type="submit">
+</form>
