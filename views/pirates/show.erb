@@ -3,16 +3,16 @@
 <body>
     <h1>Here are the Pirates of the Jersey Shore</h1>
         <div class="pirate">
-            <h1>Name: <%= @pirates.name %></h1><br>
-            <h1>Weight: <%= @pirates.weight %></h1><br>
-            <h1>Height: <%= @pirates.height %></h1><br>
+            <p>Name: <%= @pirate.name %></p>
+            <p>Weight: <%= @pirate.weight %></p>
+            <p>Height: <%= @pirate.height %></p>
         </div><br>
     <h2>The pirates are sailing in two ships</h2>
         <% @ships.each do |ship| %>
             <div class="ship">
-                <p>Name: <%= ship.name %></p><br>
-                <p>Type: <%= ship.type %></p><br>
-                <p>Booty: <%= ship.booty %></p><br>
+                <p>Name: <%= ship.name %></p>
+                <p>Type: <%= ship.type %></p>
+                <p>Booty: <%= ship.booty %></p>
             </div><br>
         <% end %>
 </body>
